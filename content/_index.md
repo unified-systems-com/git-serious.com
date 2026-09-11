@@ -1,7 +1,7 @@
 ---
 title: git-serious
 description: Visualize, track, and secure your CI/CD system — for humans and agents.
-headline: CI/CD configuration is impossible to see all at once. Getting it wrong is catastrophic.
+headline: CI/CD configuration is impossible to see all at once. That's why we built the grid.
 lede: Visualize, track, and secure your CI/CD system — for humans and agents.
 
 status:
@@ -56,7 +56,7 @@ slides:
     text: Collectors and their schedules. What reads GitHub, how often, when it last ran, and what it brought back.
     alt: A table of collectors and schedules with run state and last-run summaries.
 
-why_heading: Nobody actually knows what it is.
+why_heading: What the hell is going on and is it even remotely secure.
 
 does_heading: Your CI/CD system, on the grid.
 does:
@@ -78,14 +78,14 @@ steps:
   - Tailor it to your liking.
 running_note: Nothing here is installable yet. The roadmap lives in the repo’s milestones.
 
-concepts_heading: Master your CI/CD system instead of being mastered by it.
+concepts_heading: Understand your CI/CD, sleep easier at night.
 concepts:
   - title: Master complexity
-    text: git-serious distills what you actually need to know, so you can master your CI/CD system instead of being mastered by it.
+    text: git-serious tracks and distills what you actually need to know across multiple dimensions. All information can be accessed by humans and agents.
   - title: Software as a sophisticated beanbag
-    text: Adjust it yourself. Your own plugins add pages, views, collectors, whatever you need to understand *your* system. git-serious ships with GitHub Actions; extending it to another forge, or to the particular shape of your pipeline, is what it’s built for.
+    text: Adjust it yourself. Build your own plugins to add pages, views, collectors, whatever you need to understand *your* system. git-serious ships with GitHub.com, which you can remove, extend, or replace with your own forge. It’s your software, make it do what you want.
   - title: The grid
-    text: Underneath is the data model at the heart of [the Analogy Platform](https://github.com/unified-systems-com/tap). It tracks, associates, and presents the pieces of your system the way you, and your agents, need to see them.
+    text: Underneath is the data model at the heart of [The Analogy Platform](https://github.com/unified-systems-com/tap). It tracks, associates, and presents the pieces of your system the way you, and your agents, need to see them.
 
 ---
 
