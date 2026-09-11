@@ -51,12 +51,19 @@ def main() -> int:
             if sw > w:
                 print(f"{name}: horizontal overflow {sw}px > {w}px"); bad += 1
             if w > 1000:
+                def settled() -> None:  # wait until the smooth scroll stops moving
+                    page.wait_for_function(
+                        """() => { const t = document.querySelector('.track');
+                                   const x = t.scrollLeft; window.__x = x;
+                                   return new Promise(r => setTimeout(() => r(t.scrollLeft === x), 150)); }""",
+                        timeout=8000)
+                    page.wait_for_timeout(200)
                 before = page.text_content(".count")
-                page.click(".controls .next"); page.wait_for_timeout(900)
-                page.click(".controls .next"); page.wait_for_timeout(900)
+                page.click(".controls .next"); settled()
+                page.click(".controls .next"); settled()
                 after = page.text_content(".count")
                 n = page.locator(".dots button").count()
-                page.click(f".dots li:nth-child({n}) button"); page.wait_for_timeout(900)
+                page.click(f".dots li:nth-child({n}) button"); settled()
                 last = page.text_content(".count")
                 page.screenshot(path=str(out / "site-last-slide.png"))
                 print(f"carousel: {before.strip()} -> {after.strip()} -> {last.strip()} ({n} slides)")
