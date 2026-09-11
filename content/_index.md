@@ -19,14 +19,22 @@ slides:
     title: One repository, as machinery.
     text: The tap repository's CI/CD drawn as lanes. The PR gate every change rolls through, publish, scheduled, fleet, baseline. Each workflow card carries zizmor's verdict. Open PRs and the security findings sit beneath.
     alt: The tap repository's workflows drawn as a machinery graph in lanes, with a table of open pull requests below.
-  - src: images/shots/org.png
-    title: The whole organisation.
-    text: Twenty-four repositories, every workflow in each, and the apps and bots wired into them, on one grid. This is the picture nobody had.
-    alt: The organisation's repositories and workflows drawn as nested boxes on a grid, with apps wired beneath.
   - src: images/shots/landing.png
     title: What moved in the last 24 hours.
     text: Every repository with something to review, and what it is. The open PRs, their checks, and the plugins they touch. The ones with nothing to do say so.
     alt: A triage page listing repositories with open pull requests to review, grouped by product and plugin.
+  - src: images/shots/secrets.png
+    title: Every secret the estate holds.
+    text: Names only, since GitHub never returns a value. Where each one is held, where it can reach, who actually names it, and the names workflows use that no scope defines.
+    alt: A secrets overview page with a summary strip, a list of secret names defined nowhere, and one card per secret.
+  - src: images/shots/secret-openai.png
+    title: One secret, in full.
+    text: Held by the organisation, reachable from an exposed trigger. Every workflow that names it, what starts each one, and how far the secret reaches beyond where it is used.
+    alt: A single organisation secret's page with holder and visibility, a reach section, and a row per consuming workflow.
+  - src: images/shots/secret-phantom.png
+    title: Named everywhere, defined nowhere.
+    text: A secret that does not exist does not fail. GitHub hands the step an empty string and the job goes green. The grid says cannot find. Whether that is a defect is for the reader to know.
+    alt: A page for a secret name used by many workflows but defined at no scope, with an explanation and a row per workflow naming it.
   - src: images/shots/zizmor.png
     title: Findings across the organisation.
     text: zizmor runs offline over the workflow YAML already on the grid. Every finding lands attached to its workflow, and the workflows the scanner could not read are listed as unknown, not clean.
