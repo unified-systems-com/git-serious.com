@@ -103,9 +103,10 @@ Rules, learned the first time round:
 - **No numbers that drift.** Finding counts, run counts, dates and version strings
   change daily on the demo grid. Write "every finding", not "155 findings". A stable
   structural count ("twenty-four repositories") is fine if it is really stable.
-- **Story order.** One repo → what moved → the secrets estate → one secret → the phantom
-  secret → findings across the org → one file → one finding → workflow anatomy → the
-  plumbing. Zoom out, then drill in, then
+- **Story order.** One repo → what moved → findings across the org → one file → one
+  finding → workflow anatomy → the plumbing.
+- **Not on the public site.** Secrets pages (names, reach, phantom secrets). They show real
+  credential names from our estate; keep them out until there is a sanitised fixture grid. Zoom out, then drill in, then
   show the machinery underneath. Put a new slide where it fits that arc.
 - **Alt text is not the caption.** It describes the picture's layout (tables, graph,
   code pane), not the pitch.
