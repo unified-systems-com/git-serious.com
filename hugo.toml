@@ -1,0 +1,21 @@
+baseURL = "https://git-serious.com/"
+locale = "en-US"
+title = "git-serious"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = "Visualize, track, and secure your CI/CD system — for humans and agents."
+  repo = "https://github.com/unified-systems-com/git-serious-tap"
+  milestones = "https://github.com/unified-systems-com/git-serious-tap/milestones"
+  org = "https://unified-systems.com"
+  tap = "https://github.com/unified-systems-com/tap"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[imaging.webp]
+  quality = 85
+
+[minify]
+  disableXML = true

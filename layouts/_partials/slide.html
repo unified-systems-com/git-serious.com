@@ -1,0 +1,21 @@
+{{/* args: .s (slide map: src/title/text/alt), .i (0-based index), .n (count) */}}
+{{ with resources.Get .s.src }}
+  {{ $w1 := .Process "resize 1200x webp" }}
+  {{ $w2 := .Process "resize 1800x webp" }}
+  {{ $w3 := .Process "resize 2400x webp" }}
+  {{ $png := .Process "resize 1600x png" }}
+  <figure class="slide" id="slide-{{ add $.i 1 }}" aria-roledescription="slide" aria-label="{{ add $.i 1 }} of {{ $.n }}">
+    <div class="frame">
+      <picture>
+        <source type="image/webp" sizes="(min-width: 68rem) 63rem, 92vw"
+                srcset="{{ $w1.RelPermalink }} 1200w, {{ $w2.RelPermalink }} 1800w, {{ $w3.RelPermalink }} 2400w">
+        <img src="{{ $png.RelPermalink }}" width="{{ $png.Width }}" height="{{ $png.Height }}"
+             alt="{{ $.s.alt }}" decoding="async" {{ if eq $.i 0 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}>
+      </picture>
+    </div>
+    <figcaption>
+      <span class="num" aria-hidden="true">{{ printf "%02d" (add $.i 1) }}</span>
+      <div><b>{{ $.s.title }}</b> {{ $.s.text | markdownify }}</div>
+    </figcaption>
+  </figure>
+{{ end }}

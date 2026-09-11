@@ -1,0 +1,17 @@
+{{ $slides := .Params.slides }}
+{{ $n := len $slides }}
+<section class="carousel" aria-roledescription="carousel" aria-label="git-serious screenshots">
+  <div class="track" tabindex="0">
+    {{ range $i, $s := $slides }}{{ partial "slide.html" (dict "s" $s "i" $i "n" $n) }}{{ end }}
+  </div>
+  <div class="controls">
+    <button type="button" class="prev" aria-label="Previous screenshot">&larr;</button>
+    <ol class="dots" aria-label="Choose screenshot">
+      {{ range $i, $s := $slides }}<li><button type="button" aria-label="{{ $s.title }}"{{ if eq $i 0 }} aria-current="true"{{ end }}></button></li>{{ end }}
+    </ol>
+    <button type="button" class="next" aria-label="Next screenshot">&rarr;</button>
+    <span class="count" aria-live="polite">01 / {{ printf "%02d" $n }}</span>
+  </div>
+</section>
+{{ $js := resources.Get "js/carousel.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
