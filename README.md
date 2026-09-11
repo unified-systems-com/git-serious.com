@@ -32,3 +32,12 @@ Run the `site-screenshots` skill (`.claude/skills/site-screenshots/SKILL.md`). I
 running git-serious instance, mints a session cookie, captures each route in
 `pages.json` with Playwright at 1600×1100 (2x), writes the slide taglines, rebuilds, and
 verifies the carousel. Drop-in replacement PNGs go in `assets/images/shots/`.
+
+## Dependencies
+
+The site ships no third-party JavaScript, fonts, or CDN assets. The only things with
+versions are in `.github/workflows/hugo.yml`: four GitHub Actions, pinned to commit SHAs
+with a version comment, and the Hugo release the workflow downloads. `renovate.json5`
+covers both (the Hugo line carries a `# renovate:` marker for the custom manager). The org
+runs Renovate self-hosted from the tap repo's `renovate.yml`; this repo has to be in that
+workflow's `RENOVATE_REPOSITORIES` list to get PRs.
