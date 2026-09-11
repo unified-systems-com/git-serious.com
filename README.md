@@ -28,7 +28,7 @@ Built with [Hugo](https://gohugo.io), served by GitHub Pages.
 
 ## Refreshing the screenshots
 
-They come from a running git-serious instance, captured with Playwright at a 1600×1100
-viewport, device scale 2, after `networkidle` plus five seconds for the graph panels to
-settle. Auth is a minted `sessionid` cookie (see the tap repo's `drive-browser` skill).
-Drop new PNGs into `assets/images/shots/` with the same names and rebuild.
+Run the `site-screenshots` skill (`.claude/skills/site-screenshots/SKILL.md`). It finds a
+running git-serious instance, mints a session cookie, captures each route in
+`pages.json` with Playwright at 1600×1100 (2x), writes the slide taglines, rebuilds, and
+verifies the carousel. Drop-in replacement PNGs go in `assets/images/shots/`.

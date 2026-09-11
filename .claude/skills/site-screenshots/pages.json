@@ -1,0 +1,12 @@
+[
+  {"name": "tap-lanes",       "path": "/double-tap/tap"},
+  {"name": "org",             "path": "/git-serious/org"},
+  {"name": "landing",         "path": "/double-tap"},
+  {"name": "zizmor",          "path": "/zizmor"},
+  {"name": "zizmor-workflow", "path": "/zizmor/workflow?workflow_id=309697194",
+   "dense": ".tap-zizmor-annot__note",
+   "note": "The code pane opens on the first finding. 'dense' scrolls its container to the window holding the most of these elements."},
+  {"name": "zizmor-finding",  "path": "/zizmor/finding?finding_id=006b6863-cca8-5344-899e-451767f04996&workflow_id=338723665"},
+  {"name": "github-workflow", "path": "/github_core/workflow?workflow_id=309697194"},
+  {"name": "cares",           "path": "/administrivia/cares"}
+]
