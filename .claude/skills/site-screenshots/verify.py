@@ -51,17 +51,24 @@ def main() -> int:
             if sw > w:
                 print(f"{name}: horizontal overflow {sw}px > {w}px"); bad += 1
             if w > 1000:
+                def arrived(idx: int) -> None:  # wait until the track has scrolled to slide idx
+                    page.wait_for_function(
+                        """i => { const t = document.querySelector('.track');
+                                  const s = t.querySelectorAll('.slide')[i];
+                                  return Math.abs(t.scrollLeft - s.offsetLeft) < 2; }""",
+                        arg=idx, timeout=8000)
+                    page.wait_for_timeout(300)  # let the IntersectionObserver update the counter
                 before = page.text_content(".count")
-                page.click(".controls .next"); page.wait_for_timeout(900)
-                page.click(".controls .next"); page.wait_for_timeout(900)
+                page.click(".controls .next"); arrived(1)
+                page.click(".controls .next"); arrived(2)
                 after = page.text_content(".count")
                 n = page.locator(".dots button").count()
-                page.click(f".dots li:nth-child({n}) button"); page.wait_for_timeout(900)
+                page.click(f".dots li:nth-child({n}) button"); arrived(n - 1)
                 last = page.text_content(".count")
                 page.screenshot(path=str(out / "site-last-slide.png"))
                 print(f"carousel: {before.strip()} -> {after.strip()} -> {last.strip()} ({n} slides)")
-                if before == after:
-                    print("carousel counter did not advance"); bad += 1
+                if after.strip() != f"03 / {n:02d}" or last.strip() != f"{n:02d} / {n:02d}":
+                    print("carousel counter did not track the scroll"); bad += 1
             if errs:
                 print(f"{name}: console errors: {errs}"); bad += 1
             ctx.close()

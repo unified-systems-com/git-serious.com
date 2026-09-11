@@ -6,7 +6,7 @@ argument-hint: [page names to recapture, or "all"]
 
 # Refresh the site screenshots and taglines
 
-The carousel on git-serious.com is eight viewport captures of the running product
+The carousel on git-serious.com is a set of viewport captures of the running product
 plus a title and one or two sentences for each. Everything lives in this repo:
 
 - `assets/images/shots/<name>.png` — the images (1600×1100 viewport at 2x = 3200×2200).
@@ -103,8 +103,9 @@ Rules, learned the first time round:
 - **No numbers that drift.** Finding counts, run counts, dates and version strings
   change daily on the demo grid. Write "every finding", not "155 findings". A stable
   structural count ("twenty-four repositories") is fine if it is really stable.
-- **Story order.** One repo → whole org → what moved → findings across the org → one
-  file → one finding → workflow anatomy → the plumbing. Zoom out, then drill in, then
+- **Story order.** One repo → what moved → the secrets estate → one secret → the phantom
+  secret → findings across the org → one file → one finding → workflow anatomy → the
+  plumbing. Zoom out, then drill in, then
   show the machinery underneath. Put a new slide where it fits that arc.
 - **Alt text is not the caption.** It describes the picture's layout (tables, graph,
   code pane), not the pitch.
