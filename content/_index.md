@@ -1,7 +1,7 @@
 ---
 title: git-serious
 description: Visualize, track, and secure your CI/CD system — for humans and agents.
-headline: CI/CD configuration is impossible to see all at once. That's why we built the grid.
+headline: CI/CD configuration is impossible to see all at once. That’s what the grid is for.
 lede: Visualize, track, and secure your CI/CD system — for humans and agents.
 
 status:
@@ -56,20 +56,20 @@ slides:
     text: Collectors and their schedules. What reads GitHub, how often, when it last ran, and what it brought back.
     alt: A table of collectors and schedules with run state and last-run summaries.
 
-why_heading: What the hell is going on and is it even remotely secure.
+why_heading: Answering “What the hell is going on and is it even remotely secure?”
 
 does_heading: Your CI/CD system, on the grid.
 does:
   - title: Pulls your running CI/CD system onto the grid
-    text: Repos, pipelines, runs, rules, apps, credentials, and the relationships between them, as one connected picture.
-  - title: Presents exactly the pages, views, and affordances you need
-    text: Built to be read by people, and by the agents working alongside them.
+    text: Repos, pipelines, runs, rules, apps, credentials, and the relationships between them, as one connected graph.
+  - title: Exactly the pages, views, and affordances you need
+    text: Built to be read by people, and by the agents working alongside them. Extensible, configurable, and built to be tailored to your needs.
   - title: Tracks how configuration and operations change over time
-    text: So “what changed?” is a question with an answer.
+    text: So “what changed?” is a question with an answer. Which you’d think would have already been dealt with, but turns out…
   - title: Enables automated, agent-driven security review
-    text: Finds issues and helps you fix them.
+    text: Native agent access to the grid enables your agents to find issues and help fix them.
   - title: Does all of it with down-scoped, read-only access
-    text: It observes your system. It can never be the thing that breaks it.
+    text: Blast radius bounded by design, based on credentials you control. It can never be the thing that breaks it.
 
 running_heading: Three steps, when it’s ready.
 steps:
@@ -85,7 +85,7 @@ concepts:
   - title: Software as a sophisticated beanbag
     text: Adjust it yourself. Build your own plugins to add pages, views, collectors, whatever you need to understand *your* system. git-serious ships with GitHub.com, which you can remove, extend, or replace with your own forge. It’s your software, make it do what you want.
   - title: The grid
-    text: Underneath is the data model at the heart of [The Analogy Platform](https://github.com/unified-systems-com/tap). It tracks, associates, and presents the pieces of your system the way you, and your agents, need to see them.
+    text: Underneath it all is the data model at the center of [The Analogy Platform](https://github.com/unified-systems-com/tap). Graph representations, history tracking, field-level information provenance, plugin management (uv), and multi-user RBAC right out of the box.
 
 ---
 
