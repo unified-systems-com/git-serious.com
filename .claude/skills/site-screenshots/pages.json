@@ -8,18 +8,6 @@
     "path": "/double-tap"
   },
   {
-    "name": "secrets",
-    "path": "/git-serious/secrets"
-  },
-  {
-    "name": "secret-openai",
-    "path": "/git-serious/secret?name=OPENAI_API_KEY"
-  },
-  {
-    "name": "secret-phantom",
-    "path": "/git-serious/secret?name=TAP_CORE_RO_PAT"
-  },
-  {
     "name": "zizmor",
     "path": "/zizmor"
   },
