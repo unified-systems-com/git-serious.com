@@ -14,12 +14,14 @@
     {{ with .Params.status }}
     <aside class="status" aria-label="Project status">
       <p><b>Status</b> {{ .text }}</p>
-      <ol class="milestones" aria-label="Milestones">
-        {{ range .milestones }}
-        <li{{ if eq . $.Params.status.now }} class="now" aria-current="step"{{ end }}>{{ . }}</li>
-        {{ end }}
-        <li class="ms-link"><a href="{{ site.Params.milestones }}">milestones ↗</a></li>
-      </ol>
+      <div class="status-row">
+        <ol class="milestones" aria-label="Milestones">
+          {{ range .milestones }}
+          <li{{ if eq . $.Params.status.now }} class="now" aria-current="step"{{ end }}>{{ . }}</li>
+          {{ end }}
+        </ol>
+        <a class="ms-link" href="{{ site.Params.milestones }}">milestones ↗</a>
+      </div>
     </aside>
     {{ end }}
 
