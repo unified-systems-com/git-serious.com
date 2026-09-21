@@ -18,15 +18,16 @@
     "note": "The code pane opens on the first finding. 'dense' scrolls its container to the window holding the most of these elements."
   },
   {
-    "name": "zizmor-finding",
-    "path": "/zizmor/finding?finding_id=006b6863-cca8-5344-899e-451767f04996&workflow_id=338723665"
-  },
-  {
     "name": "github-workflow",
     "path": "/github_core/workflow?workflow_id=309697194"
   },
   {
     "name": "cares",
     "path": "/administrivia/cares"
+  },
+  {
+    "name": "plugin-github-core",
+    "path": "/administrivia/plugin?slug=github_core",
+    "note": "Route is a query param (slug=), from tap-plugin-administrivia PR #11; the taxonomy graph re-fits on layoutstop, so keep the settle delay."
   }
 ]

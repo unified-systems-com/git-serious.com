@@ -31,10 +31,6 @@ slides:
     title: A workflow file, findings in the margin.
     text: One workflow file with every finding marked on the source and called out alongside it, Tufte-style. The workflow's anatomy is drawn beneath.
     alt: A workflow YAML file with a security finding highlighted on a line and explained in the right margin.
-  - src: images/shots/zizmor-finding.png
-    title: One finding, in context.
-    text: Title and verdict, the workflow's anatomy, what to change, and whether it matters here, given what the grid knows about the repository.
-    alt: A single security finding page with the workflow's anatomy graph and guidance on what to change.
   - src: images/shots/github-workflow.png
     title: Anatomy of a workflow.
     text: Jobs ranked over what they need, steps inside each, artifacts to the side, and the recent runs beneath with elapsed time against the usual.
@@ -43,6 +39,10 @@ slides:
     title: The plumbing.
     text: Collectors and their schedules. What reads GitHub, how often, when it last ran, and what it brought back.
     alt: A table of collectors and schedules with run state and last-run summaries.
+  - src: images/shots/plugin-github-core.png
+    title: A plugin, declared and observed.
+    text: The github_core plugin page. What the manifest declares against what actually registered, and the taxonomy it contributes to the grid. Every node and edge type with live counts, and in violet, the edges that cross into other plugins’ types.
+    alt: A plugin page with identity fields, declared-versus-registered surface counts, and a taxonomy graph of node and edge types with a legend.
 
 why_heading: Answering “What the hell is going on and is it even remotely secure?”
 
